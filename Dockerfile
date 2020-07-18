@@ -16,4 +16,4 @@ LABEL \
     org.opencontainers.image.description="Small container to run iptables rules for your host"
 RUN apk add --no-cache -q --progress --update iptables
 ENV PRIVATE_IPS=10.0.0.0/8,172.16.0.0/12,192.168.0.0/16
-ENTRYPOINT [ "/rules.sh" ]
+ENTRYPOINT [ "/bin/sh", "-c", "/rules.sh" ]
