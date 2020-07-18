@@ -7,5 +7,5 @@ services:
       - NET_ADMIN
     network_mode: host
     volumes:
-      ./rules.sh:/rules.sh:ro
+      - ./rules.sh:/rules.sh:ro
     restart: unless-stopped

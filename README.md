@@ -30,6 +30,12 @@ Built for amd64, 386, ARM and s390x CPU architectures.
     iptables -A DOCKER-USER -d $WEB_SERVER_CONTAINER -j DROP
     ```
 
+1. Make it executable
+
+    ```sh
+    chmod 500 rules.sh
+    ```
+
 1. Run the container (ephemerally) with
 
     ```sh
@@ -49,3 +55,4 @@ License is of course an MIT license
 ## TODOs
 
 - Get microbadger webhook link
+- Trap error and revert back changes
